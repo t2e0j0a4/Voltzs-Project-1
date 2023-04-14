@@ -1,3 +1,176 @@
 @tailwind base;
 @tailwind components;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Login & SignUp Pages Starts */
+
+.bannerImageBackground {
+    background: linear-gradient(206.31deg, rgba(119, 137, 241, 0.5) 0%, rgba(158, 229, 218, 0.5) 23.23%, rgba(158, 229, 218, 0.5) 83.12%, rgba(119, 137, 241, 0.5) 100%);
+}
+
+.goBackPage {
+    background: linear-gradient(180deg, #9EE5DA 0%, #7789F1 100%);
+}
+
+.pageSectionHeadings {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    background: linear-gradient(260.72deg, #7789F1 0%, #9EE5DA 37.73%, #9EE5DA 97.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.inputGroup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.labelInputDiv {
+    padding: 0 2px;
+    position: absolute;
+    left: 17px;
+    transition: all 0.4s ease;
+}
+
+.labelInputDiv.activeLabel {
+    background-color: #fff;
+    padding: 0 2px;
+    position: absolute;
+    top: -14px;
+    left: 25px;
+    z-index: 0;
+}
+
+.labelInputDiv label {
+    color: #A5A5A5;
+    cursor: text;
+    transition: all 0.4s ease;
+}
+
+.labelInputDiv.activeLabel label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    background: linear-gradient(180deg, #9EE5DA 0%, #7789F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.inputGroup input {
+    width: 98%;
+    margin: auto;
+    padding: 12px 12px;
+    outline: none;
+    border-width: 2px;
+    border-radius: 8px;
+    border: 2px solid #9EE5DA; 
+    color: #232323;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px; 
+}
+
+.loginOptions {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 10px;
+}
+
+.checkboxOption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.checkboxOption input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.accountInOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.accountInOptions button {
+    padding: 10px 36px;
+    background: linear-gradient(270deg, #7789F1 0%, #9EE5DA 31.56%);
+    border-radius: 40px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all 0.4s ease;
+}
+
+.accountInOptions button:hover {
+    background: linear-gradient(90deg, #7789F1 0%, #9EE5DA 31.56%);
+}
+
+.buttonWrapper {
+    border: 2px solid #9EE5DA;
+    padding: 6px 24px;
+    border-radius: 40px;
+    background: #fff;
+    background-color: #fff;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.buttonWrapper:hover {
+    background : linear-gradient(to left,#7789F1 0%, #9EE5DA 31.56%);
+}
+
+.linkingButton {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    
+    transition: all 0.4s ease;
+    
+    background: linear-gradient(270deg, #7789F1 6.78%, #9EE5DA 52.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.buttonWrapper:hover .linkingButton {
+    color: #fff;
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: #fff;
+    background-clip: none;
+}
+
+/* Login & SignUp Pages Ends */
+
 @tailwind utilities;
