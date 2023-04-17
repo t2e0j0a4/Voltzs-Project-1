@@ -42,12 +42,13 @@
     padding: 0 2px;
     position: absolute;
     left: 17px;
-    transition: all 0.4s ease;
+    top: 12px;
+    transition: all 0.1s linear;
 }
 
 .labelInputDiv.activeLabel {
     background-color: #fff;
-    padding: 0 2px;
+    padding: 0 4px;
     position: absolute;
     top: -14px;
     left: 25px;
@@ -57,7 +58,7 @@
 .labelInputDiv label {
     color: #A5A5A5;
     cursor: text;
-    transition: all 0.4s ease;
+    transition: all 0.1s linear;
 }
 
 .labelInputDiv.activeLabel label {
@@ -119,11 +120,11 @@
     gap: 1rem;
 }
 
-.accountInOptions button {
-    padding: 10px 36px;
-    background: linear-gradient(270deg, #7789F1 0%, #9EE5DA 31.56%);
+.accountInOptions button[type="submit"] {
+    padding: 10px 24px;
+    background: linear-gradient(to left, #7789F1 0%, #9EE5DA 31.56%);
     border-radius: 40px;
-    color: #fff;
+    color: #232323;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -131,43 +132,40 @@
     transition: all 0.4s ease;
 }
 
-.accountInOptions button:hover {
-    background: linear-gradient(90deg, #7789F1 0%, #9EE5DA 31.56%);
+.accountInOptions button[type="submit"]:hover {
+    background: linear-gradient(to left, #9EE5DA 0%, #7789F1 100%);
 }
 
-.buttonWrapper {
-    border: 2px solid #9EE5DA;
-    padding: 6px 24px;
-    border-radius: 40px;
+.accountInOptions .buttonWrapper {
+    
+    padding: 7px 24px;
     background: #fff;
-    background-color: #fff;
-    transition: background-color 0.4s ease;
-    cursor: pointer;
+    border-radius: 40px;
+    border: 2px solid #9EE5DA; 
+    transition: all 0.4s ease;
+    
 }
 
 .buttonWrapper:hover {
-    background : linear-gradient(to left,#7789F1 0%, #9EE5DA 31.56%);
+    background: linear-gradient(to left, #7789F1 0%, #9EE5DA 31.56%);
 }
 
-.linkingButton {
+.buttonWrapper .linkingButton {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
-    
-    transition: all 0.4s ease;
-    
-    background: linear-gradient(270deg, #7789F1 6.78%, #9EE5DA 52.22%);
+    background: linear-gradient(to left, #9EE5DA 0%, #7789F1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .buttonWrapper:hover .linkingButton {
-    color: #fff;
+    color: #232323;
     background: none;
     -webkit-background-clip: none;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: #232323;
     background-clip: none;
 }
 

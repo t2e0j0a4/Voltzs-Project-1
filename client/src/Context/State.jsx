@@ -17,7 +17,7 @@ const State = (props) => {
     
     function handleInputBlur(e) {
         let allLabelDivs = Array.from(document.querySelectorAll('.labelInputDiv'));
-        let loginInputs = Array.from(document.querySelectorAll('.loginInputs'));
+        let loginInputs = Array.from(document.querySelectorAll('.inputs'));
         allLabelDivs.forEach((labelDiv) => {
            loginInputs.forEach((loginIn) => {
             if (loginIn.dataset.inputgiven === labelDiv.dataset.inputfor) {
@@ -33,7 +33,8 @@ const State = (props) => {
     // Login Details
     const [loginDetails, setLoginDetails] = useState({
         loginemail : '',
-        loginpassword :''
+        loginpassword :'',
+        rememberme : false
     })
 
     function handleLoginInputsChange(e) {
@@ -44,10 +45,41 @@ const State = (props) => {
 
     function loginFormSubmit(e) {
         e.preventDefault();
+        // Login API Intergration Pending...
+    }
+
+    // Sign Up Details
+    const [signupDetails, setSignUpDetails] = useState({
+      signupusername: "",
+      signupemail: "",
+      signupmobile: "",
+      signuppassword : ""
+    });
+
+    function handleSignUpInputsChange(e) {
+        setSignUpDetails({
+            ...signupDetails, [e.target.name] : e.target.value
+        })
+    }
+
+    function signUpFormSubmit(e) {
+        e.preventDefault();
+        // User Register API Integration Pending...
+    }
+
+    function clearInputs() {
+
+        setLoginDetails({
+          loginemail: "", loginpassword: "", rememberme: false,
+        });
+
+        setSignUpDetails({
+          signupusername: "", signupemail: "", signupmobile: "", signuppassword: "",
+        });
     }
 
     return (
-      <Context.Provider value={{ handleInputFocus, handleInputBlur, loginDetails, handleLoginInputsChange, loginFormSubmit }}>
+      <Context.Provider value={{ handleInputFocus, handleInputBlur, loginDetails, handleLoginInputsChange, loginFormSubmit, signupDetails, handleSignUpInputsChange, signUpFormSubmit, clearInputs }}>
         {props.children}
       </Context.Provider>
     );

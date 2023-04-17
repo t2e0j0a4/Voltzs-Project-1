@@ -19,7 +19,7 @@ const Login = () => {
   }, [])
 
   const makeContext = useContext(Context);
-  const { handleInputFocus, handleInputBlur, loginFormSubmit, handleLoginInputsChange, loginDetails } = makeContext;
+  const { handleInputFocus, handleInputBlur, loginFormSubmit, handleLoginInputsChange, loginDetails, clearInputs } = makeContext;
 
   return (
     <div className='w-[100%] max-w-[100%] min-h-[100vh] flex flex-row justify-between mx-auto items-start bg-[#f6f6f6]'>
@@ -42,26 +42,26 @@ const Login = () => {
             <div data-inputfor="labelemail" className="labelInputDiv">
               <label htmlFor="loginEmail">Email</label>
             </div>
-            <input required type="email" name="loginemail" id="loginEmail" className='loginInputs' value={loginDetails.loginemail} onChange={(e) => {handleLoginInputsChange(e)}} data-inputgiven="labelemail" onFocus={function(e) {handleInputFocus(e)}} onBlur={function(e) {handleInputBlur(e)}}/>
+            <input required type="email" name="loginemail" id="loginEmail" className='inputs' value={loginDetails.loginemail} onChange={(e) => {handleLoginInputsChange(e)}} data-inputgiven="labelemail" onFocus={function(e) {handleInputFocus(e)}} onBlur={function(e) {handleInputBlur(e)}}/>
           </div>
           <div className="inputGroup loginPasswordInputGroup">
             <div data-inputfor="labelpassword" className="labelInputDiv">
               <label htmlFor="loginPassword">Password</label>
             </div>
-            <input required type="password" name='loginpassword' value={loginDetails.loginpassword} onChange={(e) => {handleLoginInputsChange(e)}} id='loginPassword' className='loginInputs' data-inputgiven="labelpassword" onFocus={function(e) {handleInputFocus(e)}} onBlur={function(e) {handleInputBlur(e)}}/>
+            <input required type="password" name='loginpassword' value={loginDetails.loginpassword} onChange={(e) => {handleLoginInputsChange(e)}} id='loginPassword' className='inputs' data-inputgiven="labelpassword" onFocus={function(e) {handleInputFocus(e)}} onBlur={function(e) {handleInputBlur(e)}}/>
           </div>
           <div className="loginOptions">
             <div className="checkboxOption rememberMeOption">
-              <input type="checkbox" name="rememberMe" id="loginRememberMe" />
+              <input type="checkbox" name="rememberMe" id="loginRememberMe" value={loginDetails.rememberme} onChange={(e) => {handleLoginInputsChange(e)}}/>
               <label htmlFor="loginRememberMe">Remember Me</label>
             </div>
             <Link to='/forgotpassword' className="hover:underline">Forgot Password ?</Link>
           </div>
           <div className="accountInOptions">
             <button type='submit' className=''>Login</button>
-            <div className="buttonWrapper">
+            <button type='button' className="buttonWrapper" onClick={() => {clearInputs()}}>
               <Link to='/register' className='linkingButton'>Sign Up</Link>
-            </div>
+            </button>
           </div>
         </form>
 
