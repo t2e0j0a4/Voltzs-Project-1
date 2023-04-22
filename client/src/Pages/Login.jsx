@@ -3,14 +3,12 @@ import React , {useContext, useEffect} from 'react';
 // React Router
 import {Link} from "react-router-dom";
 
-// React Icons
-import {FiArrowLeft} from "react-icons/fi";
-
 // Context API
 import Context from "../Context/Context";
 
 // Components
 import SideBanner from '../Components/SideBanner'
+import BackToggle from '../Components/BackToggle';
 
 const Login = () => {
 
@@ -30,9 +28,7 @@ const Login = () => {
 
         {/* Back Page Arrow */}
 
-        <div className="goBackPage w-[40px] h-[40px] rounded-[50%] flex justify-center items-center absolute top-[20px] left-[30px]">
-          <Link to='/'><FiArrowLeft fontSize='28px' fontWeight='800' color='#fff'/></Link>
-        </div>
+        <BackToggle top="20px" left="30px"/>
 
         {/* Login Form Beggining */}
 
