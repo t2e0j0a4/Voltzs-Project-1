@@ -5,10 +5,10 @@ import Context from "../Context/Context";
 
 // Components
 import SideBanner from '../Components/SideBanner';
-import BackToggle from '../Components/BackToggle';
 
 // React Router
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const Register = () => {
 
@@ -24,7 +24,11 @@ const Register = () => {
 
         {/* Back Page Arrow */}
 
-        <BackToggle top={"15px"} left={"20px"}/>
+        <div className={`goBackPage w-[40px] h-[40px] rounded-[50%] flex justify-center items-center absolute top-[15px] left-[20px]`}>
+          <Link to="/">
+            <FiArrowLeft fontSize="28px" fontWeight="800" color="#fff" />
+          </Link>
+        </div>
 
         <form onSubmit={(e) => {signUpFormSubmit(e)}} className='bg-[#ffffff] w-[400px] lg:w-[80%] xl:w-[70%] 2xl:w-[75%] flex flex-col justify-center items-center rounded-[12px] mt-[3rem] gap-[1.6rem] py-[1.6rem] px-[1rem] sm:px-[0.6rem] md:px-[1rem]'>
 

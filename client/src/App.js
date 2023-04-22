@@ -1,21 +1,12 @@
 import React from 'react'
 
 // React Router
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 
 // Pages
+import Home from './Pages/Home';
 import Login from "./Pages/Login";
 import Register from './Pages/Register';
-
-const Home = () => {
-  return (
-    <div>
-      Home
-      <Link to="/login">Login</Link>
-      <Link to="/register">Register</Link>
-    </div>
-  )
-}
 
 const App = () => {
   return (
